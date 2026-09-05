@@ -1,40 +1,763 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Timileyin | My Portfolio</title>
+
     <style>
-/* Professional website styling */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-}
 
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+        /* =========================
+           GENERAL SETTINGS
+        ========================= */
 
-section {
-    padding: 50px 20px;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-button, .btn, a {
-    transition: 0.3s ease;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-button:hover, .btn:hover {
-    transform: translateY(-2px);
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #222;
+            line-height: 1.6;
+        }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
-@media (max-width: 768px) {
-    nav {
-        font-size: 13px;
-    }
+        a,
+        button,
+        .btn {
+            transition: 0.3s ease;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background-color: #111;
+            padding: 18px 8px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 6px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        nav a:hover {
+            color: #25D366;
+        }
+
+
+        /* =========================
+           HOME / HERO
+        ========================= */
+
+        .hero {
+            background-color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .profile {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #25D366;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #25D366;
+        }
+
+        .hero p {
+            max-width: 500px;
+            margin: auto;
+            color: #555;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 13px 25px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .title p {
+            color: #666;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .service {
+            background-color: white;
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .service h3 {
+            margin: 10px 0;
+        }
+
+        .service p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .icon {
+            font-size: 35px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skill {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+        }
+
+        .skill-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .bar {
+            background-color: #ddd;
+            height: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .html {
+            width: 60%;
+            height: 100%;
+            background-color: #25D366;
+        }
+
+        .design {
+            width: 75%;
+            height: 100%;
+            background-color: #25D366;
+        }
+
+        .marketing {
+            width: 65%;
+            height: 100%;
+            background-color: #25D366;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .project img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project h3 {
+            margin: 15px 10px 5px;
+        }
+
+        .project p {
+            color: #666;
+            font-size: 14px;
+            padding: 0 15px;
+        }
+
+        .project .btn {
+            font-size: 13px;
+            padding: 10px 18px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .services,
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+
+            nav a {
+                font-size: 12px;
+                margin: 0 3px;
+            }
+
+            section {
+                padding: 40px 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <!-- =========================
+         HOME SECTION
+    ========================= -->
+
+    <div class="hero" id="home">
+
+        <img
+            src="./myphoto.jpg"
+            alt="Timileyin"
+            class="profile"
+        >
+
+        <h1>
+            Hi, I'm
+            <span>Timileyin</span>
+        </h1>
+
+        <p>
+            I'm a creative designer and web developer
+            passionate about helping individuals and
+            businesses build a strong presence online.
+        </p>
+
+        <a href="#contact" class="btn">
+            🚀 Let's Work Together
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         ABOUT SECTION
+    ========================= -->
+
+    <section id="about">
+
+        <div class="title">
+
+            <h2>
+                About Me
+            </h2>
+
+            <p>
+                Get to know me
+            </p>
+
+        </div>
+
+
+        <div class="about">
+
+            <p>
+                My name is Timileyin. I am a young creative
+                person interested in technology, business,
+                graphic design and web development.
+            </p>
+
+            <br>
+
+            <p>
+                I am currently learning how to build websites
+                using HTML and CSS. My goal is to develop
+                valuable digital skills and use them to help
+                individuals and businesses grow online.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES SECTION
+    ========================= -->
+
+    <section id="services">
+
+        <div class="title">
+
+            <h2>
+                My Services
+            </h2>
+
+            <p>
+                What I can help you with
+            </p>
+
+        </div>
+
+
+        <div class="services">
+
+
+            <!-- Graphic Design -->
+
+            <div class="service">
+
+                <div class="icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Graphic Design
+                </h3>
+
+                <p>
+                    Flyers, posters and social media
+                    graphics for businesses.
+                </p>
+
+            </div>
+
+
+            <!-- Web Development -->
+
+            <div class="service">
+
+                <div class="icon">
+                    💻
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    Simple and responsive websites
+                    using HTML and CSS.
+                </p>
+
+            </div>
+
+
+            <!-- Digital Marketing -->
+
+            <div class="service">
+
+                <div class="icon">
+                    📱
+                </div>
+
+                <h3>
+                    Digital Marketing
+                </h3>
+
+                <p>
+                    Helping businesses promote their
+                    products and services online.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS SECTION
+    ========================= -->
+
+    <section id="skills">
+
+        <div class="title">
+
+            <h2>
+                My Skills
+            </h2>
+
+            <p>
+                Skills I am developing
+            </p>
+
+        </div>
+
+
+        <!-- HTML -->
+
+        <div class="skill">
+
+            <div class="skill-name">
+                HTML & Web Development
+            </div>
+
+            <div class="bar">
+                <div class="html"></div>
+            </div>
+
+        </div>
+
+
+        <!-- Graphic Design -->
+
+        <div class="skill">
+
+            <div class="skill-name">
+                Graphic Design
+            </div>
+
+            <div class="bar">
+                <div class="design"></div>
+            </div>
+
+        </div>
+
+
+        <!-- Digital Marketing -->
+
+        <div class="skill">
+
+            <div class="skill-name">
+                Digital Marketing
+            </div>
+
+            <div class="bar">
+                <div class="marketing"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS SECTION
+    ========================= -->
+
+    <section id="projects">
+
+        <div class="title">
+
+            <h2>
+                My Projects
+            </h2>
+
+            <p>
+                Some of my work
+            </p>
+
+        </div>
+
+
+        <div class="projects">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project">
+
+                <img
+                    src="1000130055-removebg-preview.png"
+                    alt="Graphic Design Project"
+                >
+
+                <h3>
+                    Graphic Design
+                </h3>
+
+                <p>
+                    Social media flyer and promotional
+                    graphics design.
+                </p>
+
+                <a href="#contact" class="btn">
+                    Ask Me
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project">
+
+                <img
+                    src="https://via.placeholder.com/500x300"
+                    alt="Website Project"
+                >
+
+                <h3>
+                    Website Design
+                </h3>
+
+                <p>
+                    A simple responsive website built
+                    with HTML and CSS.
+                </p>
+
+                <a href="#contact" class="btn">
+                    Ask Me
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project">
+
+                <img
+                    src="https://via.placeholder.com/500x300"
+                    alt="Marketing Project"
+                >
+
+                <h3>
+                    Digital Marketing
+                </h3>
+
+                <p>
+                    Online promotion and social media
+                    marketing project.
+                </p>
+
+                <a href="#contact" class="btn">
+                    Ask Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================= -->
+
+    <section id="contact">
+
+        <div class="title">
+
+            <h2>
+                Contact Me
+            </h2>
+
+            <p>
+                Let's work together
+            </p>
+
+        </div>
+
+
+        <div class="contact">
+
+            <p>
+                📱 WhatsApp: 07079400671
+            </p>
+
+            <p>
+                Feel free to contact me for enquiries,
+                designs and website projects.
+            </p>
+
+
+            <!-- WHATSAPP BUTTON -->
+
+            <a
+                href="https://wa.me/2347079400671"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn">
+
+                💼 Hire Me on WhatsApp
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Timileyin.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Built with HTML & CSS
+        </p>
+
+    </footer>
+
+
+</body>
+
+    </html>    }
 
     section {
         padding: 40px 15px;
