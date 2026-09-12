@@ -9,10 +9,6 @@
 
     <style>
 
-        /* =========================
-           GENERAL SETTINGS
-        ========================= */
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -35,9 +31,7 @@
         }
 
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+        /* NAVIGATION */
 
         nav {
             background-color: #111;
@@ -61,14 +55,12 @@
         }
 
 
-        /* =========================
-           HOME
-        ========================= */
+        /* HOME */
 
         .hero {
             background-color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
 
         .profile {
@@ -81,7 +73,7 @@
         }
 
         .hero h1 {
-            font-size: 32px;
+            font-size: 34px;
             margin-bottom: 10px;
         }
 
@@ -90,25 +82,27 @@
         }
 
         .hero h2 {
-            font-size: 20px;
+            font-size: 21px;
             color: #444;
             margin-bottom: 15px;
         }
 
         .hero p {
-            max-width: 550px;
+            max-width: 600px;
             margin: auto;
             color: #555;
         }
 
 
-        /* =========================
-           BUTTON
-        ========================= */
+        /* BUTTONS */
+
+        .buttons {
+            margin-top: 25px;
+        }
 
         .btn {
             display: inline-block;
-            margin-top: 20px;
+            margin: 6px;
             padding: 13px 25px;
             background-color: #25D366;
             color: white;
@@ -121,10 +115,19 @@
             background-color: #128C7E;
         }
 
+        .btn-outline {
+            background-color: transparent;
+            color: #25D366;
+            border: 2px solid #25D366;
+        }
 
-        /* =========================
-           SECTIONS
-        ========================= */
+        .btn-outline:hover {
+            background-color: #25D366;
+            color: white;
+        }
+
+
+        /* SECTIONS */
 
         section {
             padding: 50px 20px;
@@ -147,9 +150,7 @@
         }
 
 
-        /* =========================
-           ABOUT
-        ========================= */
+        /* ABOUT */
 
         .about {
             background-color: white;
@@ -159,9 +160,7 @@
         }
 
 
-        /* =========================
-           SERVICES
-        ========================= */
+        /* SERVICES */
 
         .services {
             display: grid;
@@ -174,6 +173,7 @@
             padding: 30px 20px;
             text-align: center;
             border-radius: 15px;
+            transition: 0.3s;
         }
 
         .service:hover {
@@ -195,9 +195,7 @@
         }
 
 
-        /* =========================
-           SKILLS
-        ========================= */
+        /* SKILLS */
 
         .skill {
             background-color: white;
@@ -248,9 +246,7 @@
         }
 
 
-        /* =========================
-           PROJECTS
-        ========================= */
+        /* PROJECTS */
 
         .projects {
             display: grid;
@@ -264,6 +260,7 @@
             overflow: hidden;
             text-align: center;
             padding-bottom: 20px;
+            transition: 0.3s;
         }
 
         .project:hover {
@@ -295,9 +292,7 @@
         }
 
 
-        /* =========================
-           CONTACT
-        ========================= */
+        /* CONTACT */
 
         .contact {
             background-color: white;
@@ -311,9 +306,7 @@
         }
 
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
             background-color: #111;
@@ -328,9 +321,7 @@
         }
 
 
-        /* =========================
-           MOBILE
-        ========================= */
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
@@ -340,7 +331,7 @@
             }
 
             .hero h1 {
-                font-size: 27px;
+                font-size: 28px;
             }
 
             .hero h2 {
@@ -366,9 +357,7 @@
 <body>
 
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -382,9 +371,7 @@
     </nav>
 
 
-    <!-- =========================
-         HOME
-    ========================= -->
+    <!-- HOME -->
 
     <div class="hero" id="home">
 
@@ -403,21 +390,28 @@
         </h2>
 
         <p>
-            I'm a creative designer and web developer
-            passionate about helping individuals and
-            businesses build a strong presence online.
+            I help individuals and businesses create
+            attractive graphics, professional logos and
+            responsive websites that build a strong
+            online presence.
         </p>
 
-        <a href="#contact" class="btn">
-            🚀 Let's Work Together
-        </a>
+        <div class="buttons">
+
+            <a href="#projects" class="btn btn-outline">
+                🎨 View My Work
+            </a>
+
+            <a href="#contact" class="btn">
+                💬 Hire Me
+            </a>
+
+        </div>
 
     </div>
 
 
-    <!-- =========================
-         ABOUT
-    ========================= -->
+    <!-- ABOUT -->
 
     <section id="about">
 
@@ -452,9 +446,7 @@
     </section>
 
 
-    <!-- =========================
-         SERVICES
-    ========================= -->
+    <!-- SERVICES -->
 
     <section id="services">
 
@@ -470,8 +462,6 @@
 
         <div class="services">
 
-
-            <!-- GRAPHIC DESIGN -->
 
             <div class="service">
 
@@ -491,8 +481,6 @@
             </div>
 
 
-            <!-- WEBSITE DESIGN -->
-
             <div class="service">
 
                 <div class="icon">
@@ -510,8 +498,6 @@
 
             </div>
 
-
-            <!-- LOGO DESIGN -->
 
             <div class="service">
 
@@ -536,9 +522,7 @@
     </section>
 
 
-    <!-- =========================
-         SKILLS
-    ========================= -->
+    <!-- SKILLS -->
 
     <section id="skills">
 
@@ -554,8 +538,6 @@
 
         </div>
 
-
-        <!-- GRAPHIC DESIGN -->
 
         <div class="skill">
 
@@ -580,8 +562,6 @@
         </div>
 
 
-        <!-- WEBSITE DESIGN -->
-
         <div class="skill">
 
             <div class="skill-top">
@@ -604,8 +584,6 @@
 
         </div>
 
-
-        <!-- LOGO DESIGN -->
 
         <div class="skill">
 
@@ -632,9 +610,7 @@
     </section>
 
 
-    <!-- =========================
-         PROJECTS
-    ========================= -->
+    <!-- PROJECTS -->
 
     <section id="projects">
 
@@ -653,10 +629,6 @@
 
         <div class="projects">
 
-
-            <!-- =========================
-                 GRAPHIC DESIGN PROJECT
-            ========================= -->
 
             <div class="project">
 
@@ -681,10 +653,6 @@
             </div>
 
 
-            <!-- =========================
-                 WEBSITE DESIGN PROJECT
-            ========================= -->
-
             <div class="project">
 
                 <img
@@ -707,10 +675,6 @@
 
             </div>
 
-
-            <!-- =========================
-                 LOGO DESIGN PROJECT
-            ========================= -->
 
             <div class="project">
 
@@ -740,9 +704,7 @@
     </section>
 
 
-    <!-- =========================
-         CONTACT
-    ========================= -->
+    <!-- CONTACT -->
 
     <section id="contact">
 
@@ -784,9 +746,7 @@
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- FOOTER -->
 
     <footer>
 
